@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: hsl(185, 75%, 39%);
+  position: relative;
+  place-items: center;
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  width: 1200px;
+  height: 1200px;
+  position: absolute;
+  top: -50%;
+  left: -15%;
+  overflow: hidden;
+  background: url(./images/bg-pattern-top.svg) no-repeat top left / cover;
+}
+
+body::after {
+  content: "";
+  width: 1200px;
+  height: 1200px;
+  position: absolute;
+  bottom: -70%;
+  right: -10%;
+  /* top: 80%;
+  left: 60%; */
+  /* transform: rotate(90deg); */
+  overflow: hidden;
+  background: url(./images/bg-pattern-bottom.svg) no-repeat bottom right / cover;
+}
+
+/* card */
+.container {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  width: 380px;
+  max-width: 400px;
+  margin: auto;
+  height: 400px;
+  background-color: white;
+  position: relative;
+  border-radius: 15px;
+  z-index: 999;
+  box-shadow: 23px 39px 46px -25px rgba(0, 0, 0, 0.27);
+  -webkit-box-shadow: 23px 39px 46px -25px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 23px 39px 46px -25px rgba(0, 0, 0, 0.27);
+}
+
+.upper {
+  position: absolute;
+  width: 380px;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  height: 130px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: url(./images/bg-pattern-card.svg);
+}
+.profile-img {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  /* margin-bottom: 0.5rem; */
+}
+.content {
+  position: relative;
+  z-index: 300;
+  width: 90%;
+}
+h2 {
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+  font-size: 18px;
+}
+span,
+p {
+  font-weight: 400;
+  font-size: 18px;
+  color: hsl(0, 0%, 59%);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info {
+  margin-bottom: 0.7rem;
+  padding: 1.5rem;
+}
+
+.divider {
+  margin: 1.5rem 0 2rem 0;
+  width: 100%;
+  height: 0.8px;
+  background-color: hsl(0, 0%, 59%);
+}
+
+.stats h2 {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+  body::after {
+    width: 990px;
+    height: 990px;
+    bottom: -60%;
+    right: -20%;
+  }
+  body::before {
+    width: 990px;
+    height: 990px;
+    top: -40%;
+    left: -40%;
+  }
+}
+@media (max-width: 768px) {
+  body::after {
+    width: 768px;
+    height: 768px;
+    bottom: -35%;
+    right: -80%;
+  }
+  body::before {
+    width: 768px;
+    height: 768px;
+    top: -30%;
+    left: -100%;
+  }
+}
