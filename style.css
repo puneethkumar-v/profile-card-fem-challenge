@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
 }
 body {
   font-family: "Kumbh Sans", sans-serif;
@@ -18,8 +19,10 @@ body::before {
   width: 1200px;
   height: 1200px;
   position: absolute;
-  top: -50%;
-  left: -15%;
+  /* top: -50%;
+  left: -15%; */
+  top: -500px;
+  left: -270px;
   overflow: hidden;
   background: url(./images/bg-pattern-top.svg) no-repeat top left / cover;
 }
@@ -29,33 +32,36 @@ body::after {
   width: 1200px;
   height: 1200px;
   position: absolute;
-  bottom: -70%;
-  right: -10%;
+  /* bottom: -70%;
+  right: -10%; */
   /* top: 80%;
   left: 60%; */
-  /* transform: rotate(90deg); */
+  bottom: -600px;
+  right: -270px;
   overflow: hidden;
   background: url(./images/bg-pattern-bottom.svg) no-repeat bottom right / cover;
 }
 
-/* card */
+/* CONTAINER */
 .container {
   display: grid;
   place-items: center;
   text-align: center;
   width: 380px;
-  max-width: 400px;
+  /* max-width: 400px; */
   margin: auto;
   height: 400px;
   background-color: white;
   position: relative;
   border-radius: 15px;
   z-index: 999;
+  overflow: hidden;
   box-shadow: 23px 39px 46px -25px rgba(0, 0, 0, 0.27);
   -webkit-box-shadow: 23px 39px 46px -25px rgba(0, 0, 0, 0.27);
   -moz-box-shadow: 23px 39px 46px -25px rgba(0, 0, 0, 0.27);
 }
 
+/* TOP IMAGE CONTAINER */
 .upper {
   position: absolute;
   width: 380px;
@@ -67,12 +73,16 @@ body::after {
   border-top-right-radius: 15px;
   background: url(./images/bg-pattern-card.svg);
 }
+
+/* PROFILE IMAGE */
 .profile-img {
   border-radius: 50%;
   object-fit: cover;
   border: 5px solid white;
   /* margin-bottom: 0.5rem; */
 }
+
+/* CONTENT */
 .content {
   position: relative;
   z-index: 300;
@@ -112,7 +122,7 @@ p {
   margin-bottom: 0.5rem;
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
   body::after {
     width: 990px;
     height: 990px;
@@ -137,6 +147,32 @@ p {
     width: 768px;
     height: 768px;
     top: -30%;
-    left: -100%;
+    left: -30%;
+  }
+} */
+
+/* MEDIA QUERIES */
+@media (max-width: 1200px) {
+  body::after {
+    width: 990px;
+    height: 990px;
+  }
+  body::before {
+    width: 990px;
+    height: 990px;
+  }
+}
+@media (max-width: 768px) {
+  body::after {
+    width: 768px;
+    height: 768px;
+    bottom: -200px;
+    right: -450px;
+  }
+  body::before {
+    width: 768px;
+    height: 768px;
+    top: -200px;
+    left: -450px;
   }
 }
